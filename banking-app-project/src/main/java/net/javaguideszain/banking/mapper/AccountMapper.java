@@ -6,6 +6,12 @@ import net.javaguideszain.banking.entity.Account;
 public class AccountMapper {
 
     public static Account mapToAccount(AccountDto accountDto){
+//        return new Account(
+//                accountDto.id(),
+//                accountDto.accountNumber(),
+//                accountDto.accountHolderName(),
+//                accountDto.balance()
+//        );
         return new Account(
                 accountDto.getId(),
                 accountDto.getAccountNumber(),

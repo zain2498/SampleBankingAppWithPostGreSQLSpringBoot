@@ -14,3 +14,6 @@ public class AccountDto {
     private double balance;
 
 }
+
+/*They are special kind of class which is used as DTO and this helps us to achieve the encapsulation and it is immutable by nature*/
+//public record AccountDto(Long id, String accountNumber, String accountHolderName,double balance ){}
