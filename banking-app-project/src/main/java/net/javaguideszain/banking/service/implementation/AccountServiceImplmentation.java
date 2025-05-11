@@ -77,4 +77,12 @@ public class AccountServiceImplmentation implements AccountService {
         return AccountMapper.mapToAccountDto(updatedAccount);
 
     }
+
+    @Override
+    public void deleteAccount(long id) {
+        Account existingAccount = accountRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("Account does not exist")
+        );
+        accountRepository.delete(existingAccount);
+    }
 }
